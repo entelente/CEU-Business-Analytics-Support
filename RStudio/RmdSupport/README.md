@@ -43,5 +43,4 @@ Warning it is a large file (~200 Mb)
 ```{r}
 install.packages("rmarkdown")
 ```
-
-7. Try to create the document again, it should work now
+Try to create the document again, it should work now
