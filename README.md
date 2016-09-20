@@ -6,4 +6,8 @@ Contributors:
 ## R programming
 [Configuring Rmd and PDF support for RStudio on Windows](RStudio/RmdSupport/README.md)
 
-(In progress) Most important R functions
+### Next:
+* Most important R functions
+* How to create nice publications using R Markdown
+
+
