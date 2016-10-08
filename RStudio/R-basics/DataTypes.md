@@ -147,3 +147,67 @@ gsub("3", "5", "I have 3 apples and 3 bananas.")
 ```
 
     ## [1] "I have 5 apples and 5 bananas."
+
+Vectors
+-------
+
+``` r
+# Vectors can be created with c(...)
+x <- c(1, 2, 3, 4, 5) # Numeric vector
+y <- c("a", "b", "c", "d", "e") # Character vector
+z <- c(T, F, F, T, F) # Logical vector
+# : can be used to create a range of integers
+2:18 # Vector of integers from 2 to 18
+```
+
+    ##  [1]  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+
+``` r
+2 * 1:9 # Vector of every second integer from 2 to 18
+```
+
+    ## [1]  2  4  6  8 10 12 14 16 18
+
+``` r
+# COncatenate vectors
+x321 <- c(x, c(3, 2, 1) )
+print(x321)
+```
+
+    ## [1] 1 2 3 4 5 3 2 1
+
+Creating DataFrames
+-------------------
+
+``` r
+# Dataframes can be created with either loading a CSV file or by combining vectors
+d <- data.frame(x, y, z, stringsAsFactors = FALSE) # We don't want the default option to create factors yet.
+# R used the variable names as colum names
+print(d, row.names=FALSE) # row.names=FALSE won't list row names/indexed
+```
+
+    ##  x y     z
+    ##  1 a  TRUE
+    ##  2 b FALSE
+    ##  3 c FALSE
+    ##  4 d  TRUE
+    ##  5 e FALSE
+
+``` r
+# Getting column names vector
+colnames(d)
+```
+
+    ## [1] "x" "y" "z"
+
+``` r
+# Setting column names
+colnames(d) <- c("First", "Second", "Third")
+```
+
+Subsetting DataFrames
+---------------------
+
+``` r
+# TODO
+```

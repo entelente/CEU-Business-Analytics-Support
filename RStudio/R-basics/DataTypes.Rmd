@@ -65,3 +65,34 @@ sub("3", "5", "I have 3 apples and 3 bananas.")
 # Sub replaces only the first occurance. To have a "global" substitution use gsub
 gsub("3", "5", "I have 3 apples and 3 bananas.")
 ```
+
+## Vectors
+```{r vectors}
+# Vectors can be created with c(...)
+x <- c(1, 2, 3, 4, 5) # Numeric vector
+y <- c("a", "b", "c", "d", "e") # Character vector
+z <- c(T, F, F, T, F) # Logical vector
+# : can be used to create a range of integers
+2:18 # Vector of integers from 2 to 18
+2 * 1:9 # Vector of every second integer from 2 to 18
+# COncatenate vectors
+x321 <- c(x, c(3, 2, 1) )
+print(x321)
+```
+
+## Creating DataFrames
+```{r dataframes}
+# Dataframes can be created with either loading a CSV file or by combining vectors
+d <- data.frame(x, y, z, stringsAsFactors = FALSE) # We don't want the default option to create factors yet.
+# R used the variable names as colum names
+print(d, row.names=FALSE) # row.names=FALSE won't list row names/indexed
+# Getting column names vector
+colnames(d)
+# Setting column names
+colnames(d) <- c("First", "Second", "Third")
+```
+
+## Subsetting DataFrames
+```{r subsetdataframes}
+# TODO
+```
