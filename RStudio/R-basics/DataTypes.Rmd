@@ -1,0 +1,67 @@
+---
+title: "Data Types"
+author: "Janos Strasszer"
+date: "October 7, 2016"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Most important data types and corresponding operations in R
+
+## Basic types
+```{r basictypes}
+# By default the type of number is double. It is called numeric sometimes.
+typeof(12)
+# For complex number the imaginary part is denoted by "i"
+typeof(12+3i)
+# A single character or any text : character
+typeof("Some text")
+# Logical variables can only two values: TRUE, FALSE or T, F as a short form
+typeof(TRUE)
+# Integers are mainly used as indexes
+typeof(as.integer(12))
+```
+
+## Basic operations
+
+### Numbers
+```{r basicoperations}
+# For numeric and integer all the mathematical operatons can be used
+(1+2-3*4)/2
+# Exp
+5^2
+# Square and n-th root
+sqrt(25)
+125^(1/3)
+```
+
+### Logical variables
+```{r logicaloperations}
+# AND : TRUE only if both of the values are TRUE
+TRUE & TRUE
+FALSE & TRUE
+FALSE & FALSE
+# OR : TRUE if at least one of the values are TRUE
+TRUE | TRUE
+FALSE | TRUE
+FALSE | FALSE
+```
+
+### Text (Character)
+```{r textoperations}
+# concatanation of text (or numbers), the default separator is a space
+paste("I have", 3, "apples.")
+# Using empty separator
+paste("I have", 3, "apples.", sep = "")
+# Using custom separator
+paste("I have", 3, "apples.", sep = " giggity ")
+# Replacing parts of text with something
+sub("3", "5", "I have 3 apples and 3 bananas.")
+# Sub replaces only the first occurance. To have a "global" substitution use gsub
+gsub("3", "5", "I have 3 apples and 3 bananas.")
+```
